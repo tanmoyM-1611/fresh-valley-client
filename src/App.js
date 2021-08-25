@@ -1,24 +1,59 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import AddProduct from './components/AddProduct/AddProduct';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Admin from './components/Admin/Admin';
+import Orders from './components/Orders/Orders';
+import Checkout from './components/Checkout/Checkout';
+export const UserContext = createContext();
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+
+        <div className='header-part'>
+          <Header></Header>
+
+        </div>
+        <div className='router-part'>
+          <Switch>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+           
+            <Route path="/login">
+              <Login></Login>
+            </Route> 
+            <PrivateRoute path="/orders">
+              <Orders></Orders>
+            </PrivateRoute>
+            <PrivateRoute path="/checkout">
+              <Checkout></Checkout>
+            </PrivateRoute>
+            <PrivateRoute path="/admin">
+              <Admin></Admin>
+            </PrivateRoute>
+
+
+          </Switch>
+        </div>
+
+      </Router>
+    </UserContext.Provider>
   );
 }
 

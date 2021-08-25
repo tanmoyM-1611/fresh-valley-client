@@ -1,0 +1,19 @@
+.card-img{
+  width: 200px;
+  height:250px;
+  margin:auto;
+  
+}
+.card-container{
+  cursor: pointer;
+}
+.price-part{
+  margin-right: auto;
+  margin-top: auto;
+  color:green;
+  
+  
+}
+.button-part{
+  margin-top:auto;
+}
