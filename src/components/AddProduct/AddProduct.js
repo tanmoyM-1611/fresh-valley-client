@@ -18,7 +18,7 @@ const AddProduct = () => {
      
     };
     console.log(eventData)
-        const url=`http://localhost:4000/addProduct`
+        const url=`https://enigmatic-meadow-19132.herokuapp.com/addProduct`
         fetch(url, {
         method: 'POST', 
         headers: {

@@ -9,7 +9,7 @@ const EditProduct = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:4000/product/${id}`)
+    fetch(`https://enigmatic-meadow-19132.herokuapp.com/product/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
   }, [])
@@ -21,7 +21,7 @@ const EditProduct = () => {
       price: data.price
     };
     console.log(eventData)
-    fetch(`http://localhost:4000/updateProduct/${id}`, {
+    fetch(`https://enigmatic-meadow-19132.herokuapp.com/updateProduct/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'

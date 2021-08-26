@@ -6,7 +6,7 @@ const Orders = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     const [orders,setOrders]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:4000/getOrders?email="+loggedInUser.email,{
+        fetch("https://enigmatic-meadow-19132.herokuapp.com/getOrders?email="+loggedInUser.email,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

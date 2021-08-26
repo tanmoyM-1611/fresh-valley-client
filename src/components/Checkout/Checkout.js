@@ -10,7 +10,7 @@ const Checkout = () => {
     let history = useHistory();
     const id=sessionStorage.getItem("id")
     useEffect(() => { 
-        fetch(`http://localhost:4000/product/${id}`)
+        fetch(`https://enigmatic-meadow-19132.herokuapp.com/product/${id}`)
           .then(res => res.json())
           .then(data => setProduct(data))
       }, [])
@@ -20,7 +20,7 @@ const Checkout = () => {
        
         const orderDetails={...loggedInUser,product:product,shipment:data,orderTime:new Date()}
 
-        fetch("http://localhost:4000/addOrder",{
+        fetch("https://enigmatic-meadow-19132.herokuapp.com/addOrder",{
             method: 'POST', 
             headers: {
               'content-type': 'application/json'

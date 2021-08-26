@@ -10,7 +10,7 @@ const ManageProduct = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     
     useEffect(() => {
-        fetch("http://localhost:4000/manageProducts?email="+loggedInUser.email,{
+        fetch("https://enigmatic-meadow-19132.herokuapp.com/manageProducts?email="+loggedInUser.email,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const ManageProduct = () => {
        
      console.log(id)
     
-       fetch(`http://localhost:4000/deleteProduct/${id}`,{
+       fetch(`https://enigmatic-meadow-19132.herokuapp.com/deleteProduct/${id}`,{
            method:'DELETE'
        })
        .then(res=>res.json())

@@ -5,7 +5,7 @@ import "../Login/Login.css"
 import "firebase/auth";
 // import { UserContext } from '../App';
 import { useHistory, useLocation } from 'react-router';
-import firebaseConfig from './firebase.config';
+import firebaseConfig from '../../../config/firebase.config';
 import { UserContext } from '../../App';
 
 if (!firebase.apps.length) {
