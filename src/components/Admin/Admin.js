@@ -11,7 +11,7 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 const Admin = () => {
     return (
         <Router>
-        <section>
+        <section className="home">
             
           <nav className="d-flex justify-content-center">
                 <Link to="/addProduct"><button type="button" class="btn btn-success m-2">ADD PRODUCT</button></Link>

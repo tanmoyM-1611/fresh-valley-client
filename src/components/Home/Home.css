@@ -2,5 +2,25 @@
  /* border: 10px solid red;  */
  padding-left: 25px;
 }
+.home{
+   
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin);  */
+
+    background-image: url("../images/pexels-shann-3927899.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    margin: 0;
+    padding: 0 ;
+    background-size:100% 100%; 
+   
+    
+  }  
 
 

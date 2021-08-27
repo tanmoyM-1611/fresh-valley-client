@@ -11,7 +11,7 @@ const OrderInfo = (props) => {
         
         <div className="order">
          
-       <p><b>Name : </b> {name}<b className="ms-2">Price:</b> ${price}</p>
+       <h3 style={{backgroundColor:"yellow"}}><b>Name : </b> {name}<b className="ms-2">Price:</b> ${price}</h3>
 
         </div>
         

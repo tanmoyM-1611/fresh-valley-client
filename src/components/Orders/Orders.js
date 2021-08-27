@@ -26,9 +26,18 @@ const Orders = () => {
 
     return (
         
+       
             
-        <section style={{border:"1px solid black"}} className="m-5 p-5">
-            <div> 
+        <section className="home"> 
+        {orders.length > 0 ?
+            <div style={{border:"1px solid green"}}>
+             
+             {
+               orders.length===0 && 
+                <div  class="spinner-border text-info" role="status"> </div>
+            }
+            
+            <div  className="m-5 p-5 "> 
             
             {
             orders.map(od=><OrderInfo order={od.product}></OrderInfo>)
@@ -36,9 +45,14 @@ const Orders = () => {
     
            </div>
            <div>
-               <p style={{textAlign:"center"}}> <strong>Total : $ {total}</strong> </p>
+               <h2 style={{textAlign:"center" ,backgroundColor:"red",color:"white"}}> <strong>Total : $ {total}</strong> </h2>
            </div>
-           
+           </div>
+            :
+            <div>
+              <h2 style={{color:"white"}}>No Orders Here...</h2>
+            </div>
+}      
            </section> 
            
         

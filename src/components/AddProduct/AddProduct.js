@@ -52,7 +52,7 @@ const AddProduct = () => {
     return (
         <section style={{border:"1px solid black"}}className="m-5 p-5"> 
           
-            <h2 style={{textAlign:"center",color:"gray"}}>Add Your Product Here !</h2>
+            <h2 style={{textAlign:"center",color:"black"}}>Add Your Product Here !</h2>
        <div  className="d-flex justify-content-center mt-4">
          
         <form onSubmit={handleSubmit(onSubmit)}>

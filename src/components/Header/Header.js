@@ -15,16 +15,16 @@ const Header = () => {
         <div className="collapse navbar-collapse " id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/home" className="nav-link">Home</Link>
+              <Link to="/home" className="nav-link" ><b>Home</b></Link>
             </li>
             <li className="nav-item">
-              <Link to="/orders" className="nav-link">Orders</Link>
+              <Link to="/orders" className="nav-link"><b>Orders</b> </Link>
             </li>
             <li className="nav-item">
-              <Link to="/admin" className="nav-link" >Admin</Link>
+              <Link to="/admin" className="nav-link" ><b>Admin</b></Link>
             </li>
             <li className="nav-item">
-              <Link to="/details" className="nav-link">Details</Link>
+              <Link to="/details" className="nav-link"><b>Details</b></Link>
             </li>
             <li className="nav-item">
               {loggedInUser.success && <p className="m-2"><strong>{loggedInUser.name}</strong></p> || <Link to="/login"><button type="button" class="btn btn-success ms-2">Log in</button></Link>}

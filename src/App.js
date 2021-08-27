@@ -15,13 +15,17 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Admin from './components/Admin/Admin';
 import Orders from './components/Orders/Orders';
 import Checkout from './components/Checkout/Checkout';
+import Details from './Details/Details';
+
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <Router>
-
+   
+    <UserContext.Provider  value={[loggedInUser, setLoggedInUser]}>
+      
+      <Router >
+         
         <div className='header-part'>
           <Header></Header>
 
@@ -37,13 +41,22 @@ function App() {
            
             <Route path="/login">
               <Login></Login>
+            </Route>  
+
+           
+
+            <Route path="/details">
+              <Details></Details>
             </Route> 
+
             <PrivateRoute path="/orders">
               <Orders></Orders>
             </PrivateRoute>
+
             <PrivateRoute path="/checkout">
               <Checkout></Checkout>
             </PrivateRoute>
+
             <PrivateRoute path="/admin">
               <Admin></Admin>
             </PrivateRoute>
