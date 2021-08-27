@@ -14,17 +14,18 @@ const Home = () => {
           
            
           
-        <section className="home container-fluid ">
-        <div className="d-flex  row row-cols-1  row-cols-md-3  justify-content-center  ">
+        <section className="home">
+            <section className="container-fluid">
+        <div className="row row-cols-1  row-cols-md-3  justify-content-center  products-container  ">
             {
                 products.length===0 && 
-                <div  class="spinner-border text-info" role="status"> </div>
+                <p class="spinner-border text-info" role="status"> </p>
             } 
             {
                 products.map(pd=><Products product={pd}></Products>)
             }
         </div>   
-        
+        </section>
         </section>
     );
 };
