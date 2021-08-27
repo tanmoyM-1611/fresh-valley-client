@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import Checkout from '../Checkout/Checkout';
+
 import "../Products/Products.css";
 const Products = (props) => {
   const { name, imageURL, price,_id } = props.product;

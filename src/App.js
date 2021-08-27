@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -9,7 +9,7 @@ import {
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-import AddProduct from './components/AddProduct/AddProduct';
+
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Admin from './components/Admin/Admin';

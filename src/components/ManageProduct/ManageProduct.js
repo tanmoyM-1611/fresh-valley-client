@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link, useHistory} from 'react-router-dom';
 import { UserContext } from '../../App';
-import EditProduct from '../EditProduct/EditProduct';
+
 
 const ManageProduct = () => {
     let history = useHistory();

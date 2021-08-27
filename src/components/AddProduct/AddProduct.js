@@ -4,9 +4,9 @@ import { useForm } from 'react-hook-form';
 import { UserContext } from '../../App';
 
 const AddProduct = () => {
-   const { register, handleSubmit, watch, errors } = useForm();
+   const { register, handleSubmit } = useForm();
   const [imageURL, setIMageURL] = useState(null);
-  const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+  const [loggedInUser]=useContext(UserContext);
   
   const onSubmit=data=>{
     console.log(data)

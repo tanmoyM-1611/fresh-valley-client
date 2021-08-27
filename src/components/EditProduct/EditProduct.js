@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const EditProduct = () => {
   const { id } = useParams();
   console.log(id);
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit} = useForm();
   const [product, setProduct] = useState({});
 
   useEffect(() => {
