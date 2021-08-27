@@ -10,15 +10,16 @@ const Home = () => {
     })
    
     return (
-        <section className="container-fluid home">
+        <section className=" home">
           
+           
+          
+       
+        <div className="row row-cols-1  row-cols-md-3 row-cols-lg-4  justify-content-center  products-container">
             {
                 products.length===0 && 
                 <div  class="spinner-border text-info" role="status"> </div>
-            }
-          
-       
-        <div className="row row-cols-1  row-cols-md-3  justify-content-center  products-container">
+            } 
             {
                 products.map(pd=><Products product={pd}></Products>)
             }
