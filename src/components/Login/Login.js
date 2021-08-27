@@ -12,7 +12,7 @@ if (!firebase.apps.length) {
 firebase.initializeApp(firebaseConfig);
 }
 const Login = () => {
-  const [setLoggedInUser]=useContext(UserContext);
+  const  [,setLoggedInUser]=useContext(UserContext);
   const [user,setUser]=useState({
     success: false,
     name:'',

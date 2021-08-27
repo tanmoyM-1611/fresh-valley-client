@@ -41,7 +41,7 @@ const ManageProduct = () => {
    
     return (
         <section className="container-fluid ">
-            {products.length>0 ? 
+           
             <div>
                    {
                 products.length===0 && 
@@ -72,11 +72,8 @@ const ManageProduct = () => {
 
                     }</div>
                 </div>
-           :
-           <div>
-               <h2>You have no product for manage.....</h2>
-           </div>
-}
+          
+
         </section>
          
     );
