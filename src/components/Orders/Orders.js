@@ -13,7 +13,7 @@ const Orders = () => {
                 Authorization : `Bearer ${sessionStorage.getItem("token")}`
             }
             
-        })
+        },[])
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[])

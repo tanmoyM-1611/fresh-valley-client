@@ -12,7 +12,7 @@ const EditProduct = () => {
     fetch(`https://enigmatic-meadow-19132.herokuapp.com/product/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
-  }, [])
+  }, [id])
 
   const onSubmit = (data) => {
     console.log(data)

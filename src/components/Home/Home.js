@@ -7,7 +7,7 @@ const Home = () => {
         fetch("https://enigmatic-meadow-19132.herokuapp.com/products")
         .then(res=>res.json())
         .then(data=>setProducts(data))
-    })
+    },[])
    
     return (
         <section className="container-fluid  home">

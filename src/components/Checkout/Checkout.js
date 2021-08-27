@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../App';
 import "../Checkout/Checkout.css"
 const Checkout = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit,formState: { errors } } = useForm();
     const [loggedInUser,setLoggedInUser]=useContext(UserContext)
     const[product,setProduct]=useState({})
     let history = useHistory();
@@ -13,7 +13,7 @@ const Checkout = () => {
         fetch(`https://enigmatic-meadow-19132.herokuapp.com/product/${id}`)
           .then(res => res.json())
           .then(data => setProduct(data))
-      }, [])
+      }, [id])
     const onSubmit = data =>{ 
        
         console.log(id)
