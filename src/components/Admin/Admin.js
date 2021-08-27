@@ -13,7 +13,7 @@ const Admin = () => {
         <Router>
         <section className="home">
             
-          <nav className="d-flex justify-content-center">
+          <nav className="d-flex justify-content-between">
                 <Link to="/addProduct"><button type="button" class="btn btn-success m-2">ADD PRODUCT</button></Link>
                 <Link to="/manageProduct"><button type="button" class="btn btn-success m-2">MANAGE PRODUCT</button></Link>
               <br />
