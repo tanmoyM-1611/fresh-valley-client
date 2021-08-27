@@ -10,7 +10,7 @@ const Home = () => {
     })
    
     return (
-        <section className=" home">
+        <section className="container-fluid home">
           
            
           
