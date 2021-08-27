@@ -10,12 +10,14 @@ const Home = () => {
     },[])
    
     return (
-        <section className="container-fluid  home">
+        <section className="home">
           
            
           
-       
-        <div className="d-flex row row-cols-1  row-cols-md-3   justify-content-center  products-container">
+       <div className="container-fluid">
+
+     
+        <div className="container-fluid  row row-cols-1  row-cols-md-3   justify-content-center  products-container">
             {
                 products.length===0 && 
                 <div  class="spinner-border text-info" role="status"> </div>
@@ -23,7 +25,8 @@ const Home = () => {
             {
                 products.map(pd=><Products product={pd}></Products>)
             }
-        </div> 
+        </div>   
+        </div>
         </section>
     );
 };
