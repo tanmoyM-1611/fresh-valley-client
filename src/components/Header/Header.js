@@ -15,16 +15,16 @@ const Header = () => {
         <div className="collapse navbar-collapse " id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/home" className="nav-link" ><b>Home</b></Link>
+              <Link to="/home" className="nav-link" style={{ fontFamily: "cursive" }}><b>Home</b></Link>
             </li>
             <li className="nav-item">
-              <Link to="/orders" className="nav-link"><b>Orders</b> </Link>
+              <Link to="/orders" className="nav-link" style={{ fontFamily: "cursive" }}><b>Orders</b> </Link>
             </li>
             <li className="nav-item">
-              <Link to="/admin" className="nav-link" ><b>Admin</b></Link>
+              <Link to="/admin" className="nav-link" style={{ fontFamily: "cursive" }}><b>Admin</b></Link>
             </li>
             <li className="nav-item">
-              <Link to="/details" className="nav-link"><b>Details</b></Link>
+              <Link to="/details" className="nav-link" style={{ fontFamily: "cursive" }}><b>Details</b></Link>
             </li>
             <li className="nav-item">
               {loggedInUser.success ? <p className="m-2"><strong>{loggedInUser.name}</strong></p> 
