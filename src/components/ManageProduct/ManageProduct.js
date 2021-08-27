@@ -7,7 +7,7 @@ import { UserContext } from '../../App';
 const ManageProduct = () => {
     let history = useHistory();
     const [products, setProducts] = useState([]);
-    const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+    const [loggedInUser]=useContext(UserContext);
     
     useEffect(() => {
         fetch("https://enigmatic-meadow-19132.herokuapp.com/manageProducts?email="+loggedInUser.email,{
@@ -21,7 +21,7 @@ const ManageProduct = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
 
-    },[])
+    },[loggedInUser.email])
 
     const deleteItems=(id)=>{
        

@@ -3,7 +3,7 @@ import { UserContext } from '../../App';
 import OrderInfo from '../OrderInfo/OrderInfo';
 import "../Orders/Orders.css"
 const Orders = () => {
-    const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+    const [loggedInUser]=useContext(UserContext);
     const [orders,setOrders]=useState([])
     useEffect(()=>{
         fetch("https://enigmatic-meadow-19132.herokuapp.com/getOrders?email="+loggedInUser.email,{
@@ -13,10 +13,10 @@ const Orders = () => {
                 Authorization : `Bearer ${sessionStorage.getItem("token")}`
             }
             
-        },[])
+        })
         .then(res=>res.json())
         .then(data=>setOrders(data))
-    },[])
+    },[loggedInUser.email])
     // const total=orders.reduce((total,od)=>total+od.product.price,0||1)
     let total=0
     for (let i = 0; i < orders.length; i++) {

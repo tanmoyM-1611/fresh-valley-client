@@ -5,7 +5,7 @@ import { UserContext } from '../../App';
 import "../Checkout/Checkout.css"
 const Checkout = () => {
     const { register, handleSubmit,formState: { errors } } = useForm();
-    const [loggedInUser,setLoggedInUser]=useContext(UserContext)
+    const [loggedInUser]=useContext(UserContext)
     const[product,setProduct]=useState({})
     let history = useHistory();
     const id=sessionStorage.getItem("id")

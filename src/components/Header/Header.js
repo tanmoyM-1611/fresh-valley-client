@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 
 const Header = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   return (
 
     <nav className="navbar navbar-expand-lg navbar-light h-100">
@@ -27,7 +27,8 @@ const Header = () => {
               <Link to="/details" className="nav-link"><b>Details</b></Link>
             </li>
             <li className="nav-item">
-              {loggedInUser.success && <p className="m-2"><strong>{loggedInUser.name}</strong></p> || <Link to="/login"><button type="button" class="btn btn-success ms-2">Log in</button></Link>}
+              {loggedInUser.success ? <p className="m-2"><strong>{loggedInUser.name}</strong></p> 
+              : <Link to="/login"><button type="button" class="btn btn-success ms-2">Log in</button></Link>}
             </li>
           </ul>
         </div>

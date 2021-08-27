@@ -12,7 +12,7 @@ if (!firebase.apps.length) {
 firebase.initializeApp(firebaseConfig);
 }
 const Login = () => {
-  const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+  const [setLoggedInUser]=useContext(UserContext);
   const [user,setUser]=useState({
     success: false,
     name:'',
@@ -80,7 +80,7 @@ const Login = () => {
     }
     const handleSubmit=event=>{
       if(newUser&&user.email&&user.password){
-        if(user.password!=user.password2){
+        if(user.password!==user.password2){
           alert("Password don't match");
        }
        else{
